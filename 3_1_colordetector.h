@@ -1,5 +1,5 @@
-#include <opencv2/core/core.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core.hpp>
+#include <opencv2/imgproc.hpp>
 #include<iostream>
 class ColorDetector {
 
@@ -148,8 +148,9 @@ cv::Mat ColorDetector::process(const cv::Mat &image)
 
 
 
-//------------------------------------------------OR--------------------------------------------------------------
-//-------We could have achieved the same result by calling a sequence of OpenCV function ----processing-----------
+
+//------------------------------------------------OR----------------------------------------------------
+//-------We could have achieved the same result by calling a sequence of OpenCV function ---------------
 /*
 cv::Mat ColorDetector::process(const cv::Mat &image) 
 {
@@ -172,7 +173,6 @@ cv::Mat ColorDetector::process(const cv::Mat &image)
 	
 	std::cout<<output.channels();
 
-
 	// apply threshold
 	cv::threshold(output,  // input image
 			output,  // output image
@@ -184,4 +184,5 @@ cv::Mat ColorDetector::process(const cv::Mat &image)
 
 	return output;
 
-}*/
+}
+*/

@@ -1,7 +1,7 @@
 #include <opencv2/core.hpp>
 #include <opencv2/highgui.hpp>
 
-#include "3_1_colordetector.h"
+#include "3_2_colordetector_floodFill.h"
 
 int main()
 {
@@ -21,9 +21,8 @@ int main()
 
 
     // 4. Process the image and display the result
-	cv::namedWindow("result");
 	cv::Mat result = cdetect.process(image);
-	cv::imshow("result_final",result);
+	cv::imshow("result_floodFill",result);
 	cv::waitKey();
 	return 0;
 }
