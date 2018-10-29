@@ -92,7 +92,7 @@ class ColorDetector {
 
 
 //-------processing---------------
-/*
+
 cv::Mat ColorDetector::process(const cv::Mat &image) 
 {
 
@@ -144,15 +144,13 @@ cv::Mat ColorDetector::process(const cv::Mat &image)
 	  return result;
 }
 
-*/
 
 
 
 
-
-//------------------------------------------------OR----------------------------------------------------
-//-------We could have achieved the same result by calling a sequence of OpenCV function ---------------
-
+//------------------------------------------------OR--------------------------------------------------------------
+//-------We could have achieved the same result by calling a sequence of OpenCV function ----processing-----------
+/*
 cv::Mat ColorDetector::process(const cv::Mat &image) 
 {
 	cv::Mat output;
@@ -174,7 +172,7 @@ cv::Mat ColorDetector::process(const cv::Mat &image)
 	
 	std::cout<<output.channels();
 
-/*
+
 	// apply threshold
 	cv::threshold(output,  // input image
 			output,  // output image
@@ -183,17 +181,7 @@ cv::Mat ColorDetector::process(const cv::Mat &image)
 			cv::THRESH_BINARY_INV); // thresholding type
 //cv::THRESH_BINARY: the regular thresholding mode
 //cv::THRESH_BINARY_INV: we used inverse mode in which the defined maximum value is assigned to the pixels that have lower than or equal to the thresold.
-*/
-cv::imshow("result_image_check_before_floodFill",image);//check
-cv::floodFill(image,
-	cv::Point(10,10),
-	cv::Scalar(255,255,255),
-	(cv::Rect*)0,
-	cv::Scalar(35,35,35),
-	cv::Scalar(35,35,35),
-	cv::FLOODFILL_FIXED_RANGE
-	);
 
 	return output;
 
-}
+}*/
