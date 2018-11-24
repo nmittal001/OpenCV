@@ -37,12 +37,11 @@ int main()
 	cv::rectangle(image, rectangle, cv::Scalar(255,255,255),1);
 	cv::namedWindow("Image with rectangle");
 	cv::imshow("Image with rectangle",image);
-
 	// display result
 	cv::namedWindow("Foreground object");
 	cv::imshow("Foreground object",foreground);
-
-	cv::waitKey();
+	//cv::imshow("result", result);
+	cv::waitKey(5000);
 	return 0;
 
 }
